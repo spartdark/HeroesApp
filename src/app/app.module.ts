@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 //rutas
 import {APP_ROUTING} from './app.routes';
 //servicios
-
+import {HeroesServices} from './services/heroes.service';
 //componentes
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
@@ -29,7 +29,10 @@ import { HeroesComponent } from './components/heroes/heroes.component';
     HttpModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [
+    //Servicios
+    HeroesServices
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
